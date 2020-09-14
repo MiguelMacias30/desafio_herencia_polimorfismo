@@ -41,4 +41,20 @@ class Teacher < Person
     def introduce
         puts "hola alumnos. mi nombre es #{@first_name} #{@last_name}"
     end
+end
+
+class Parent < Person
+
+    def initialize(first, last, age, type)
+        super(first, last, age, type)
+    end
+
+
+    def talk
+        puts 'aqui es la reunion de apoderados?'
+    end
+
+    def introduce
+        puts "hola soy uno de los apoderados mi nombre es: #{@first_name} #{last_name}"
+    end
 end 
