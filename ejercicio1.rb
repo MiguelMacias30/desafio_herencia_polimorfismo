@@ -11,4 +11,19 @@ class Person
         @age += 1
     end
 
-end     
+end
+
+class Student < Person
+
+    def initialize(first, last, age, type)
+        super(first, last, age, type)
+    end
+
+    def talk
+        puts 'aqui es la clase de programacion con ruby'
+    end
+
+    def introduce
+        puts "hola profesor mi nombre es: #{@first_name} #{@last_name}"
+    end
+end 
