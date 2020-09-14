@@ -37,3 +37,75 @@ module Alimentacion
          end
     end
 end
+
+class Animal
+    attr_accessor :nombre
+    @nombre = nombre
+end
+
+class Ave < Animal
+    include Habilidades::Volador
+    include Habilidades::Caminante
+    include Alimentacion::Herbivoro
+    include Alimentacion::Carnivoro
+end
+
+class Mamifero < Animal
+    include Habilidades::Nadador
+    include Habilidades::Caminante
+    include Alimentacion::Herbivoro
+    include Alimentacion::Carnivoro
+end
+
+class Insecto < Animal
+    include Habilidades::Nadador
+    include Habilidades::Caminante
+    include Habilidades::Volador
+    include Alimentacion::Carnivoro
+    include Alimentacion::Herbivoro
+end
+
+class Pinguino < Ave
+    include Habilidades::Nadador,Caminante
+    include Alimentacion::Carnivoro
+end
+
+class Paloma < Ave
+    include Habilidades::Volador
+    include Alimentacion::Herbivoro
+end
+
+class Pato < Ave
+    include Habilidades::Volador
+    include Alimentacion::Herbivoro
+end
+
+class Perro < Mamifero
+    include Habilidades::Caminante
+    include Alimentacion::Carnivoro
+end
+
+class Gato < Mamifero
+    include Habilidades::Caminante
+    include Alimentacion::Carnivoro
+end
+
+class Vaca < Mamifero
+    include Habilidades::Caminante
+    include Alimentacion::Herbivoro
+end
+
+class Mosca < Insecto
+    include Habilidades::Volador
+    include Alimentacion::Carnivoro
+end
+
+class Mariposa < Insecto
+    include Habilidades::Volador
+    include Alimentacion::Herbivoro
+end
+
+class Abeja < Insecto
+    include Habilidades::Volador
+    include Alimentacion::Herbivoro
+end 
